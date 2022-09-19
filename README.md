@@ -22,8 +22,12 @@ step 3: Connect with Database
 step 4: Submit the form details to Database
   The index.cshtml form when filled and the submit button is pressed, the control gets diverted to the         submit action. The submit action takes the tbluserDetail as input to the function and adds into the table   or db.
    public IActionResult Submit(TblUserDetail tblUserDetail) - name of the action function
-   @model MyWebApplication.Models.TblUserDetail - links the data submitted in the form with the table.
+   
+   @model MyWebApplication.Models.TblUserDetail; - links the data submitted in the form with the table.
    
 Step 5: Displaying the Details inside the Database
   Inside the Layout.cshtml file a button with List as name is added on pressed redirects to the List action   in home controller, which provides the list of data to the List View file.
-  @model IEnumerable<MyWebApplication.Models.TblUserDetail> - the input parameter to the List View file       which can be accessed as "Model"
+ 
+ @model IEnumerable<MyWebApplication.Models.TblUserDetail> - the input parameter to the List View file       
+  
+  which can be accessed as "Model"
